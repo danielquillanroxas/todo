@@ -77,11 +77,11 @@ const TodoList = () => {
   return (
     <div className="p-grid p-justify-center">
       <div className="text-center m-5 surface-card p-4 border-round flex flex-column align-items-center justify-content-center">
-  <span className="font-medium m-3">To-do list App</span>
-  <Button className='custom-button m-3' label='Add Item to the List' onClick={handleAddNewTask}>
-    <i className="pi pi-plus"></i>
-  </Button>
-</div>
+        <span className="font-medium m-3">To-do list App</span>
+          <Button className='custom-button m-3' label='Add Item to the List' onClick={handleAddNewTask}>
+          <i className="pi pi-plus"></i>
+          </Button>
+      </div>
       <div className="p-col-12 p-md-10 p-lg-8 card">
         <DataTable value={griddata}>
           <Column field="name" header="Task Name" />
