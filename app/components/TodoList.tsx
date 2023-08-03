@@ -3,6 +3,7 @@ import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column'
 import { Button } from 'primereact/button'
 import { Dialog } from 'primereact/dialog'
+import { InputText } from 'primereact/inputtext'
 import 'primereact/resources/primereact.min.css'
 import 'primeflex/primeflex.css'
 import 'primeicons/primeicons.css'
@@ -98,9 +99,9 @@ const TodoList = () => {
         <Dialog header={selectedItem ? 'Edit Item' : 'Add New Item'} visible={visible} style={{ width: '50vw' }} onHide={handleCancelEdit} footer={footerContent}>
           <form>
             <label htmlFor="name">Task Name: </label>
-            <input type="text" id="name" value={selectedItem ? selectedItem.name : newTask.name} onChange={(e) => selectedItem ? setSelectedItem({ ...selectedItem, name: e.target.value }) : setNewTask({ ...newTask, name: e.target.value })} />
+            <InputText id="name" value={selectedItem ? selectedItem.name : newTask.name} onChange={(e) => selectedItem ? setSelectedItem({ ...selectedItem, name: e.target.value }) : setNewTask({ ...newTask, name: e.target.value })} />
             <label htmlFor="description"> Description: </label>
-            <input type="text" id="description" value={selectedItem ? selectedItem.description : newTask.description} onChange={(e) => selectedItem ? setSelectedItem({ ...selectedItem, description: e.target.value }) : setNewTask({ ...newTask, description: e.target.value })} />
+            <InputText id="description" value={selectedItem ? selectedItem.description : newTask.description} onChange={(e) => selectedItem ? setSelectedItem({ ...selectedItem, description: e.target.value }) : setNewTask({ ...newTask, description: e.target.value })} />
           </form>
         </Dialog>
       </div>
