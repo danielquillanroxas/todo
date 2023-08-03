@@ -26,3 +26,8 @@ body {
     rgb(var(--background-start-rgb));
   font-family: var(--font-family);
 }
+
+.custom-button {
+  width: 100%;
+  max-width: 400px;
+}
